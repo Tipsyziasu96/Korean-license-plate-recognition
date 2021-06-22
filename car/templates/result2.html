@@ -1,0 +1,213 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>너의 번호는</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    {% load static %}
+
+    <!-- <link rel="manifest" href="site.webmanifest"> -->
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'img/favicon.png' %}">
+    <!-- Place favicon.ico in the root directory -->
+    <link href='https://fonts.googleapis.com/css?family=Poppins:300,400,500,500i,600,700,700i,800,800i,900&display=swap' rel='stylesheet' type='text/css'>
+    <!-- CSS here -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}">
+    <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/themify-icons.css' %}">
+    <link rel="stylesheet" href="{% static 'css/nice-select.css' %}">
+    <link rel="stylesheet" href="{% static 'css/flaticon.css' %}">
+    <link rel="stylesheet" href="{% static 'css/animate.css' %}">
+    <link rel="stylesheet" href="{% static 'css/slicknav.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <!-- <link rel="stylesheet" href="css/responsive.css"> -->
+</head>
+
+<body>
+    <!--[if lte IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+        <![endif]-->
+
+    <!-- header-start -->
+    <header>
+        <div class="header-area ">
+            <div id="sticky-header" class="main-header-area ">
+                <div class="container-fluid p-0">
+                    <div class="row align-items-center justify-content-between no-gutters">
+                        <div class="col-xl-2 col-lg-2">
+                            <div class="logo-img">
+                                <a href="index.html">
+                                    <h1 style="color: white;"></h1>
+                                    <h2 style="color: white;">너의 번호는</h2>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="col-12">
+                            <div class="mobile_menu d-block d-lg-none"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- header-end -->
+    
+    <!-- slider_area_start -->
+    <div class="slider_area slider_bg_1" style="padding-top: 100px">
+        <div class="slider_text">
+            <div class="container">
+                <div class="position_relv">
+                    <div class="row">
+                        <div class="col-xl-9" style="height: 250px;">
+                            <div class="title_text h3">
+                                <img src="C:\\Users\\Jun_PC\\anaconda3\\envs\\mysite\\media\\123.jpg" alt="">
+                                {% for image in Licese %}
+                                {% endfor %}
+
+                                {% block content %}
+                                {% for q in queryset %}
+                                <a href="{{q.slug}}">{{q.title}}</a>
+                                <a href="{{q.slug}}"><img src="{{q.get_image_url}}" class="img-responsive"></a>
+                                <br/>
+                                {%endfor%}
+                                {% endblock %}
+                                <h5>입력된 사진의 번호판 :  <br><br>
+                                    <img src = "{% static 'img/document.jpg'%}">               </h5>
+                                <h3 >분석결과:    <br><br>
+                                    {{ result }}</h3>
+                            </div>
+                            <img src="{{ License_object.LP_img.url }}">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="countDOwn_area" style="padding-top: 300px">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-xl-4 col-md-6 col-lg-4">
+                        <div class="single_date">
+                            <i class="ti-location-pin"></i>
+                            <span>KOREA , Seoul City</span>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-md-6 col-lg-3">
+                        <div class="single_date">
+                            <!-- <i class="ti-alarm-clock"></i> -->
+                            <span>2021-1 4조 캡스톤 프로젝트</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- slider_area_end -->
+
+
+    <!-- footer_start -->
+    <footer class="footer footer_bg_1">
+        <div class="circle_ball d-none d-lg-block">
+        </div>
+            <div class="footer_top">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-4 col-md-4 col-lg-4">
+                            <div class="footer_widget">
+                                <h3 class="footer_title">
+                                        Share
+                                </h3>
+                                <ul>
+                                    <li><a target="_blank" href="http://facebook.com">Facebook</a></li>
+                                    <li><a target="_blank" href="http://twitter.com">Twitter</a></li>
+                                    <li><a target="_blank" href="http://Instagram.com">Instagram</a></li>
+                                    <li><a target="_blank" href="http://youtube.com">Youtube</a></li>
+                                </ul>
+    
+                            </div>
+                        </div>
+                        <!-- 공간띄우기 위해 -->
+                        <div class="col-xl-4 col-md-4 col-lg-4">
+                            <div class="footer_widget">
+                            </div>
+                        </div>
+                        <!-- 공간띄우기 끝 -->
+                        <div class="col-xl-4 col-md-4 col-lg-4">
+                            <div class="footer_widget">
+                                <h3 class="footer_title">
+                                        Venue
+                                </h3>
+                                <p style="width: 400px;">
+                                    209 Neungdong-ro, Gwangjin-gu, Seoul, Korea <br>
+                                     <br>
+                                   
+                                    
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="copy-right_text">
+                <div class="container">
+                    <div class="footer_border"></div>
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <p class="copy_right text-center">
+                                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    <!-- footer_end -->
+
+
+
+
+
+
+    <!-- JS here -->
+    <script src="{% static 'js/vendor/modernizr-3.5.0.min.js' %}"></script>
+    <script src="{% static 'js/vendor/jquery-1.12.4.min.js' %}"></script>
+    <script src="{% static 'js/popper.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'js/isotope.pkgd.min.js' %}"></script>
+    <script src="{% static 'js/ajax-form.js' %}"></script>
+    <script src="{% static 'js/waypoints.min.js' %}"></script>
+    <script src="{% static 'js/jquery.counterup.min.js' %}"></script>
+    <script src="{% static 'js/imagesloaded.pkgd.min.js' %}"></script>
+    <script src="{% static 'js/scrollIt.js' %}"></script>
+    <script src="{% static 'js/jquery.scrollUp.min.js' %}"></script>
+    <script src="{% static 'js/wow.min.js' %}"></script>
+    <script src="{% static 'js/nice-select.min.js' %}"></script>
+    <script src="{% static 'js/jquery.slicknav.min.js' %}"></script>
+    <script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
+    <script src="{% static 'js/jquery.countdown.js' %}"></script>
+    <script src="{% static 'js/plugins.js' %}"></script>
+
+    <!--contact js-->
+    <script src="{% static 'js/contact.js' %}"></script>
+    <script src="{% static 'js/jquery.ajaxchimp.min.js' %}"></script>
+    <script src="{% static 'js/jquery.form.js' %}"></script>
+    <script src="{% static 'js/jquery.validate.min.js' %}"></script>
+    <script src="{% static 'js/mail-script.js' %}"></script>
+
+    <script src="{% static 'js/main.js' %}"></script>
+
+</body>
+
+</html>
