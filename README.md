@@ -20,3 +20,6 @@ https://github.com/qjadud1994/CRNN-Keras [CRNN Model]
 1. npm install  
 2. npm audit fix  
 3. python manage.py runserver
+
+## Web
+
