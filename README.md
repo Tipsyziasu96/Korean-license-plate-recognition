@@ -22,4 +22,4 @@ https://github.com/qjadud1994/CRNN-Keras [CRNN Model]
 3. python manage.py runserver
 
 ## Web
-
+![webb](https://user-images.githubusercontent.com/73636140/125192375-84688400-e282-11eb-9e7c-d403681cdf05.PNG)
