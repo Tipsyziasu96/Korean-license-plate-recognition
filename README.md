@@ -14,7 +14,7 @@ https://github.com/qjadud1994/CRNN-Keras [CRNN Model]
 1. Upload image 
 2. Image cropping process
 3. Prediction Model works
-4. Predicted text will be displayed on web
+4. Predicted text will be displayed on a web
 
 ## Usage
 1. npm install  
